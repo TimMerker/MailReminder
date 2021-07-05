@@ -45,13 +45,13 @@ for idx in range(len(data)):
     name = data[idx]["Name"].strip()
     email = data[idx]["Email"].strip()
     paid = data[idx]["Paid"]
-    subject = "Schuhverleih 2021"
+    subject = "Reminder Subject"
 
     msg = EmailMessage()
-    msg.set_content("Hallo " + name + ",\n\n" +
-                    "die Gebühren für den Schuhverleih wurden noch nicht bezahlt.\n\n"
-                    "Bitte überweise das Geld an das folgende Bankkonto.\n\n"
-                    "Viele Grüße,\n\n" +
+    msg.set_content("Dear " + name + ",\n\n" +
+                    "Email body...\n\n"
+                    "Email body continued...\n\n"
+                    "Kind regards,\n\n" +
                     your_name)
     print(msg.as_string())
     # Create the email to send
